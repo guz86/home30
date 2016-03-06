@@ -34,7 +34,7 @@ post '/visit' do
 
 	@c = Client.new params[:client]
 	if @c.save
-		erb "<h2>Thank you! Dear, #{@name} we'll be waiting for you at #{@datetime} Your barber:#{@barber}! Your color: #{@color}</h2>"
+		erb "<h2>Thank you!</h2>"
 	else
 		@error = @c.errors.full_messages.first
 		erb :visit
